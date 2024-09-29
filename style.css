@@ -1,0 +1,415 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Styles */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(71, 42, 42);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    border: 1px solid rgb(58, 53, 53);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -10px rgb(237, 63, 63);
+}
+
+/* Video Background */
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation Styles */
+header nav {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+header nav .logo_ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .logo_ul img {
+    width: 90px;
+}
+
+header nav .logo_ul ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 10px;
+}
+
+header nav .logo_ul ul li {
+    margin-top: 10px;
+    padding: 3px 15px;
+}
+
+header nav .logo_ul ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s linear;
+}
+
+header nav .logo_ul ul li a:hover {
+    color: rgb(215, 120, 65);
+}
+
+/* Content Styles */
+header .content {
+    position: relative;
+    color: rgb(240, 250, 255);
+    margin-top: 50px;
+    padding-left: 40px;
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    background: rgba(0, 0, 0, 0.5);   
+}
+
+header .content p {
+    font-size: 15px;
+    width: 450px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red, 0 0 30px darkred;
+}
+
+header .content p::-webkit-scrollbar {
+    width: 8px;
+}
+
+header .content p::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header .content p::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+header .content p::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+header .content h1 {
+    font-size: 40px;
+    animation: blink 2s infinite, glow 2s infinite alternate;
+    color: #ff6347;
+}
+
+/* Animations */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff6347, 0 0 30px #ff4500, 0 0 40px #ff4500, 0 0 50px #ff4500;
+    }
+}
+
+/* Homepage Styles */
+header .homepage {
+    font-size: large;
+    width: 40%;
+    text-align: left;
+    display: block;
+    color: white;
+    text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red, 0 0 30px darkred;
+    opacity: 1;
+}
+
+/* Details Section */
+header .content .detail {
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.detail h6,
+.detail h5,
+.detail h4,
+.detail h3 {
+    margin-right: 10px;   
+    font-size: 20px;
+}
+
+header .content .detail h5 {
+    color: greenyellow;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+header .content .detail h6 {
+    color: rgb(237, 9, 9);
+    font-size: 25px;
+}
+
+header .content .detail h3 spam {
+    background: yellow;
+    color: black;
+}
+
+/* Button Styles */
+header .content .btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header .content .btns a {
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: rgb(46, 37, 37);
+    margin-left: 10px;
+    background-color: #1abc9c;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.7), 0 0 10px rgba(26, 188, 156, 0.5);
+}
+
+header .content .btns a:hover {
+    background-color: #16a085;
+    box-shadow: 0 0 20px rgba(26, 188, 156, 1), 0 0 30px rgba(26, 188, 156, 0.7);
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+header section {
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 20px;
+    color: aliceblue;
+}
+
+/* Cards Section */
+header section .cards {
+    position: relative;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+header section .cards .card:hover {
+    transform: scale(1.05); 
+}
+
+header section .cards .card {
+    position: relative;
+    min-width: 250px; 
+    height: 150px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    margin-right: 10px;
+    display: flex; 
+    justify-content: flex-end;
+    box-shadow:  3px 3px 5px rgba(247, 13, 13, 0.8);
+} 
+
+header section .cards .card .poster { 
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+    object-fit: cover;
+} 
+
+.cont {
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    padding: 10px; 
+    background: rgba(0, 0, 0, 0.6); 
+    color: white; 
+    z-index: 1; 
+}
+
+/* Sub Section */
+.sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 5px; 
+}
+
+.sub p {
+    margin: 0; 
+}
+
+.sub h3 {
+    margin: 0; 
+    color: gold; 
+}
+
+.sub span {
+    font-weight: bold; 
+    color: yellow; 
+}
+
+
+
+/* //quizz */
+
+header nav .container {
+    width: 20%;
+    height: 42.8%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 18%;
+    right: 0;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+header nav .container h5 {
+    font-size: 18px;
+    font-weight: 20px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    text-shadow: 0 0 20px rgba(236, 240, 241, 0.8);
+}
+
+.question {
+    margin-bottom: 20px;
+    font-size: .8em;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+}
+
+.option {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 9px 9px;
+    border-radius: 5px;
+    margin: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.8);
+    flex: 0 0 45%;
+    text-align: center;
+}
+
+.option:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(26, 188, 156, 1);
+}
+
+.result {
+    display: none;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.next-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 10px rgba(39, 174, 96, 0.8);
+}
+
+.next-btn:hover {
+    background-color: #219653;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(39, 174, 96, 1);
+}
+
+
+
+.btns {
+    margin: 20px;
+}
+
+.trailer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+.btns {
+    margin: 20px;
+    position: relative;
+    z-index: 10;
+}
